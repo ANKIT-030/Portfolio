@@ -49,7 +49,7 @@ export default function AnimatedBackground(){
       {/* Floating code snippets */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div initial={{y:0}} animate={{y:[0,-16,0]}} transition={{duration:8, repeat: Infinity}} className="absolute left-10 top-20 glass p-3 rounded-md text-xs code-snippet opacity-80 floating">
-          const greet = () => console.log('Hello, world!')
+          const greet = () = console.log('Hello, world!')
         </motion.div>
 
         <motion.div initial={{y:0}} animate={{y:[0,18,0]}} transition={{duration:10, repeat: Infinity}} className="absolute right-16 top-40 glass p-3 rounded-md text-xs code-snippet opacity-75 floating">
