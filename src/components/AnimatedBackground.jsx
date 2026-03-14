@@ -1,12 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-
-// Conditionally import framer-motion
-let motion = { div: 'div' }
-try {
-  motion = require('framer-motion').motion
-} catch (e) {
-  console.warn('Framer Motion not available for AnimatedBackground')
-}
+import { motion } from 'framer-motion'
 
 // Simple Canvas particle background and floating code snippets overlay
 export default function AnimatedBackground(){
