@@ -26,7 +26,7 @@ export default function Contact() {
           <div className="text-slate-300">Connect with me</div>
           <div className="mt-4 flex gap-3">
             <a href="https://github.com/ANKIT-030" className="text-slate-300">GitHub</a>
-            <a href="www.linkedin.com/in/ankit-chaturvedy-aa0bb425a" className="text-slate-300">LinkedIn</a>
+            <a href="linkedin.com/in/ankit-chaturvedy-aa0bb425a" className="text-slate-300">LinkedIn</a>
             <a href="Chaturvedyankit2424@gmail.com" className="text-slate-300">Email</a>
           </div>
         </div>
