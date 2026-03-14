@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-export default function Contact(){
-  const [form, setForm] = useState({name:'', email:'', message:''})
-  const handleChange = e => setForm({...form, [e.target.name]: e.target.value})
+export default function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
   const handleSubmit = e => { e.preventDefault(); alert('This demo form does not send — add backend to submit.'); }
 
   return (
@@ -25,9 +25,9 @@ export default function Contact(){
         <div className="glass p-6 rounded-md flex flex-col justify-center">
           <div className="text-slate-300">Connect with me</div>
           <div className="mt-4 flex gap-3">
-            <a href="#" className="text-slate-300">GitHub</a>
-            <a href="#" className="text-slate-300">LinkedIn</a>
-            <a href="mailto:youremail@example.com" className="text-slate-300">Email</a>
+            <a href="https://github.com/ANKIT-030" className="text-slate-300">GitHub</a>
+            <a href="www.linkedin.com/in/ankit-chaturvedy-aa0bb425a" className="text-slate-300">LinkedIn</a>
+            <a href="Chaturvedyankit2424@gmail.com" className="text-slate-300">Email</a>
           </div>
         </div>
       </div>
