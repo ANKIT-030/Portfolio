@@ -1,0 +1,15 @@
+# Ignore dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Local logs
+build.log
+
+# Vite cache
+.vite/
+
+# OS files
+.DS_Store
+thumbs.db
