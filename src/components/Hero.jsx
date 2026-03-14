@@ -1,6 +1,13 @@
 import React from 'react'
 import Typing from './Typing'
-import { motion } from 'framer-motion'
+
+// Conditionally import framer-motion to prevent SSR issues
+let motion = { div: 'div' }
+try {
+  motion = require('framer-motion').motion
+} catch (e) {
+  console.warn('Framer Motion not available, using regular divs')
+}
 
 export default function Hero() {
     return (

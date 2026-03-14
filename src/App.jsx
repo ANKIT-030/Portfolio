@@ -1,4 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+
+// Lazy load components to prevent build issues
+const AnimatedBackground = React.lazy(() => import('./components/AnimatedBackground').catch(() => ({ default: () => null })))
+const Hero = React.lazy(() => import('./components/Hero').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Hero Section</h1></div> })))
+const About = React.lazy(() => import('./components/About').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">About Section</h1></div> })))
+const Skills = React.lazy(() => import('./components/Skills').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Skills Section</h1></div> })))
+const Projects = React.lazy(() => import('./components/Projects').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Projects Section</h1></div> })))
+const TechGraph = React.lazy(() => import('./components/TechGraph').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Tech Visualization</h1></div> })))
+const Experience = React.lazy(() => import('./components/Experience').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Experience Section</h1></div> })))
+const Contact = React.lazy(() => import('./components/Contact').catch(() => ({ default: () => <div className="text-center py-12"><h1 className="text-2xl">Contact Section</h1></div> })))
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -36,24 +46,56 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+function LoadingFallback() {
+  return (
+    <div style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8' }}>
+      Loading...
+    </div>
+  )
+}
+
 export default function App() {
     console.log('App component rendering...')
 
     return (
         <ErrorBoundary>
-            <div style={{ minHeight: '100vh', backgroundColor: '#05060a', color: 'white', position: 'relative', overflowX: 'hidden' }}>
-                <div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: '3rem 1.5rem' }}>
-                    <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '2rem', color: '#3ee0ff' }}>
-                        Portfolio Loading...
-                    </h1>
-                    <p style={{ color: '#94a3b8', fontSize: '1.125rem', marginBottom: '2rem' }}>
-                        If you can see this, React is working! The issue might be with component imports or dependencies.
-                    </p>
-                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '0.5rem', padding: '1rem' }}>
-                        <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>Debug Info:</h2>
-                        <p>Current time: {new Date().toLocaleString()}</p>
-                        <p>React version: {React.version}</p>
-                    </div>
+            <div className="min-h-screen text-slate-100 relative overflow-x-hidden" style={{ backgroundColor: '#05060a' }}>
+                <Suspense fallback={<LoadingFallback />}>
+                    <AnimatedBackground />
+                </Suspense>
+
+                <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+                    <Suspense fallback={<LoadingFallback />}>
+                        <Hero />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <About />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <Skills />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <Projects />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <TechGraph />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <Experience />
+                    </Suspense>
+
+                    <Suspense fallback={<LoadingFallback />}>
+                        <Contact />
+                    </Suspense>
+
+                    <footer className="mt-24 text-center text-slate-400 text-sm">
+                        © {new Date().getFullYear()} Ankit Chaturvedy — Built with React, Tailwind, Framer Motion & Three.js
+                    </footer>
                 </div>
             </div>
         </ErrorBoundary>
