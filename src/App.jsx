@@ -1,12 +1,4 @@
 import React from 'react'
-import AnimatedBackground from './components/AnimatedBackground'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import TechGraph from './components/TechGraph'
-import Experience from './components/Experience'
-import Contact from './components/Contact'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,13 +17,13 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-[#05060a] text-slate-100 flex items-center justify-center">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h1>
-            <p className="text-slate-400 mb-4">The application encountered an error.</p>
-            <details className="text-left bg-slate-800 p-4 rounded">
-              <summary className="cursor-pointer">Error details</summary>
-              <pre className="text-red-300 text-sm mt-2 overflow-auto">
+        <div style={{ minHeight: '100vh', backgroundColor: '#05060a', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center', padding: '2rem' }}>
+            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ef4444', marginBottom: '1rem' }}>Something went wrong</h1>
+            <p style={{ color: '#94a3b8', marginBottom: '1rem' }}>The application encountered an error.</p>
+            <details style={{ textAlign: 'left', backgroundColor: '#1e293b', padding: '1rem', borderRadius: '0.5rem' }}>
+              <summary style={{ cursor: 'pointer' }}>Error details</summary>
+              <pre style={{ color: '#fca5a5', fontSize: '0.875rem', marginTop: '0.5rem', overflow: 'auto' }}>
                 {this.state.error?.toString()}
               </pre>
             </details>
@@ -45,23 +37,23 @@ class ErrorBoundary extends React.Component {
 }
 
 export default function App() {
+    console.log('App component rendering...')
+
     return (
         <ErrorBoundary>
-            <div className="min-h-screen text-slate-100 relative overflow-x-hidden">
-                <AnimatedBackground />
-
-                <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
-                    <Hero />
-                    <About />
-                    <Skills />
-                    <Projects />
-                    <TechGraph />
-                    <Experience />
-                    <Contact />
-
-                    <footer className="mt-24 text-center text-slate-400 text-sm">
-                        © {new Date().getFullYear()} Ankit Chaturvedy — Built with React, Tailwind, Framer Motion & Three.js
-                    </footer>
+            <div style={{ minHeight: '100vh', backgroundColor: '#05060a', color: 'white', position: 'relative', overflowX: 'hidden' }}>
+                <div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: '3rem 1.5rem' }}>
+                    <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '2rem', color: '#3ee0ff' }}>
+                        Portfolio Loading...
+                    </h1>
+                    <p style={{ color: '#94a3b8', fontSize: '1.125rem', marginBottom: '2rem' }}>
+                        If you can see this, React is working! The issue might be with component imports or dependencies.
+                    </p>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '0.5rem', padding: '1rem' }}>
+                        <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>Debug Info:</h2>
+                        <p>Current time: {new Date().toLocaleString()}</p>
+                        <p>React version: {React.version}</p>
+                    </div>
                 </div>
             </div>
         </ErrorBoundary>
