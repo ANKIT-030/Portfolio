@@ -9,7 +9,7 @@ const internships = [
       "Worked in Agile teams (sprints, stand-ups)",
       "Optimized performance and fixed bugs"], tools: ['React', 'REST APIs', 'JavaScript', 'html', 'css']
 
-  }
+  },
   {
     company: '1M1B (1 Million for 1 Billion)', role: 'Data Analyst Intern', period: 'Jun 2025 – Aug 2025', points: ["Performed data cleaning and analysis using Python and SQL",
       "Generated insights for digital education programs",
