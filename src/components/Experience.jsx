@@ -7,7 +7,7 @@ const internships = [
       "Developed responsive frontend modules using HTML, CSS, and JavaScript",
       "Integrated REST APIs into a React-based dashboard",
       "Worked in Agile teams (sprints, stand-ups)",
-      "Optimized performance and fixed bugs"]
+      "Optimized performance and fixed bugs"], tools: ['React', 'REST APIs', 'JavaScript', 'html', 'css']
   }
 
 ]
