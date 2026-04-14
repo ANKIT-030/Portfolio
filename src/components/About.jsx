@@ -20,7 +20,7 @@ export default function About(){
           <h3 className="font-medium">Timeline</h3>
           <div className="text-slate-400 text-sm mt-2">
             <div className="flex gap-3 items-start">
-              <div className="text-neon-purple">2022</div>
+              <div className="text-neon-purple">2020</div>
               <div>Started B.Tech, Learned core CS fundamentals</div>
             </div>
             <div className="flex gap-3 items-start mt-2">
