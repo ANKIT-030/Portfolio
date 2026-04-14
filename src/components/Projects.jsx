@@ -3,21 +3,51 @@ import { motion } from 'framer-motion'
 import Modal from './Modal'
 
 const EX = [
-  {id:1, title:'AI Study Mate', desc:'AI learning assistant that provides study plans, quizzes and explanations.', tech:[Frontend: React.js
-Backend: Node.js / Python
-Database: MongoDB / Firebase
-AI Integration: OpenAI GPT API
-Tools & Features: NLP, Machine Learning, JWT Authentication
-Deployment: Vercel / AWS], github:'https://github.com/ANKIT-030/AiStudyMate.git', live:'#'},
-  {id:2, title:'CityAssist', desc:'CityAssist is a full-stack community-driven application that helps users find verified local services when relocating to a new city. It solves the problem of unreliable directories by combining service listings with community reviews and admin verification.
-
-The platform allows users to discover services like maids, drivers, gyms, and grocery stores with trusted ratings, real feedback, and location-based search. It also includes an admin system to ensure authenticity and prevent fake listings.', tech:[Frontend: React Native / React.js
-Backend: Node.js, Express.js
-Database: PostgreSQL, Firebase
-Authentication: Firebase Auth, Google OAuth
-APIs: Google Maps API, Firebase Cloud Messaging
-Deployment: Vercel], github:'https://github.com/ANKIT-030/CityAssist.git', live:'#'},
-  {id:3, title:'Data Science Project', desc:'Exploratory analysis and predictive models.', tech:['Python','Pandas','Scikit-learn'], github:'#', live:'#'}
+  {
+    id: 1,
+    title: 'AI Study Mate',
+    desc: 'AI learning assistant that provides study plans, quizzes and explanations.',
+    tech: [
+      'React.js',
+      'Node.js',
+      'Python',
+      'MongoDB',
+      'Firebase',
+      'OpenAI GPT API',
+      'JWT Authentication',
+      'Vercel / AWS'
+    ],
+    github: 'https://github.com/ANKIT-030/AiStudyMate.git',
+    live: '#'
+  },
+  {
+    id: 2,
+    title: 'CityAssist',
+    desc: 'CityAssist is a full-stack community-driven application that helps users find verified local services when relocating to a new city. It solves the problem of unreliable directories by combining service listings with community reviews and admin verification. The platform allows users to discover services like maids, drivers, gyms, and grocery stores with trusted ratings, real feedback, and location-based search. It also includes an admin system to ensure authenticity and prevent fake listings.',
+    tech: [
+      'React Native',
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'PostgreSQL',
+      'Firebase',
+      'Firebase Auth',
+      'Google OAuth',
+      'Google Maps API',
+      'Firebase Cloud Messaging',
+      'Vercel'
+    ],
+    github: 'https://github.com/ANKIT-030/CityAssist.git',
+    live: '#'
+  },
+  {
+    id: 3,
+    title: 'Data Science Project',
+    desc: 'Exploratory analysis and predictive models.',
+    tech: ['Python', 'Pandas', 'Scikit-learn'],
+    github: '#',
+    live: '#'
+  }
 ]
 
 export default function Projects(){
