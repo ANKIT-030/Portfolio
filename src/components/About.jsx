@@ -20,16 +20,16 @@ export default function About(){
           <h3 className="font-medium">Timeline</h3>
           <div className="text-slate-400 text-sm mt-2">
             <div className="flex gap-3 items-start">
-              <div className="text-neon-purple">2020</div>
+              <div className="text-neon-purple">2022</div>
               <div>Started B.Tech, Learned core CS fundamentals</div>
             </div>
             <div className="flex gap-3 items-start mt-2">
-              <div className="text-neon-purple">2022</div>
+              <div className="text-neon-purple">2024</div>
               <div>Built several web apps and explored ML</div>
             </div>
             <div className="flex gap-3 items-start mt-2">
-              <div className="text-neon-purple">2024</div>
-              <div>Internships & AI projects</div>
+              <div className="text-neon-purple">2025</div>
+              <div>Internships & AI projects(online)</div>
             </div>
           </div>
         </motion.div>

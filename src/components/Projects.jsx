@@ -3,29 +3,33 @@ import { motion } from 'framer-motion'
 import Modal from './Modal'
 
 const EX = [
-  {id:1, title:'AI Study Mate', desc:'AI learning assistant that provides study plans, quizzes and explanations.', tech:['Python','TensorFlow','React'], github:'#', live:'#'},
-  {id:2, title:'MERN Stack Web App', desc:'Full-stack web app with authentication and real-time features.', tech:['MongoDB','Express','React','Node'], github:'#', live:'#'},
-  {id:3, title:'Data Science Project', desc:'Exploratory analysis and predictive models.', tech:['Python','Pandas','Scikit-learn'], github:'#', live:'#'}
+  { id: 1, title: 'AI Study Mate', desc: 'AI learning assistant that provides study plans, quizzes and explanations.', tech: ['Python', 'TensorFlow', 'React'], github: '#', live: '#' },
+  { id: 2, title: 'CityAssist', desc: 'CityAssist is a full-stack community-driven application that helps users find verified local services when relocating to a new city. It solves the problem of unreliable directories by combining service listings with community reviews and admin verification.The platform allows users to discover services like maids, drivers, gyms, and grocery stores with trusted ratings, real feedback, and location-based search. It also includes an admin system to ensure authenticity and prevent fake listings.', tech: ['Frontend: React Native / React.js', 'Backend: Node.js Express.js',
+'Database: PostgreSQL, Firebase',
+'Authentication: Firebase Auth, Google OAuth',
+'APIs: Google Maps API, Firebase Cloud Messaging',
+'Deployment: Firebase / AWS'], github: '#', live: '#' },
+  { id: 3, title: 'Data Science Project', desc: 'Exploratory analysis and predictive models.', tech: ['Python', 'Pandas', 'Scikit-learn'], github: '#', live: '#' }
 ]
 
-export default function Projects(){
+export default function Projects() {
   const [open, setOpen] = useState(null)
   return (
     <section id="projects" className="mt-12">
       <h2 className="text-2xl font-semibold mb-6">Projects</h2>
       <div className="grid md:grid-cols-3 gap-6">
-        {EX.map(p=> (
-          <motion.div key={p.id} whileHover={{ y:-8 }} className="glass p-4 rounded-md cursor-pointer" onClick={()=> setOpen(p)}>
+        {EX.map(p => (
+          <motion.div key={p.id} whileHover={{ y: -8 }} className="glass p-4 rounded-md cursor-pointer" onClick={() => setOpen(p)}>
             <div className="text-lg font-semibold">{p.title}</div>
             <div className="text-slate-400 text-sm mt-2">{p.desc}</div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {p.tech.map(t=> <span key={t} className="text-xs bg-slate-800 px-2 py-1 rounded">{t}</span>)}
+              {p.tech.map(t => <span key={t} className="text-xs bg-slate-800 px-2 py-1 rounded">{t}</span>)}
             </div>
           </motion.div>
         ))}
       </div>
 
-      <Modal open={!!open} onClose={()=> setOpen(null)}>
+      <Modal open={!!open} onClose={() => setOpen(null)}>
         {open && (
           <div>
             <h3 className="text-xl font-semibold">{open.title}</h3>
