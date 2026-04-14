@@ -2,7 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const internships = [
-  {company:'Internship Co', role:'Software Engineering Intern', period:'Jun 2023 - Aug 2023', tools:['React','Node.js','Docker']}
+  {company:'Next Gen Dev', role:'Web Development Intern', period:'July 2024 – Sept 2024',  points:[
+      "Developed responsive frontend modules using HTML, CSS, and JavaScript",
+      "Integrated REST APIs into a React-based dashboard",
+      "Worked in Agile teams (sprints, stand-ups)",
+      "Optimized performance and fixed bugs"]},
+  {company:'1M1B (1 Million for 1 Billion)', role:'Data Analyst Intern', period:'Jun 2025 – Aug 2025', tools:['Python', 'SQL', 'Pandas', 'NumPy', 'Excel'], points:[ "Performed data cleaning and analysis using Python and SQL",
+      "Generated insights for digital education programs",
+      "Worked with real datasets for impact analysis"]}
 ]
 
 export default function Experience(){
